@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>DOM</h2>
+
+    <p> Document Object Model (DOM) is a programming interface for HTML and XML documents, that allows to create,
+        manipulate, or delete the element from the document. It defines the logical structure of documents and the way a document is accessed and manipulated. With the help of DOM, the webpage can be represented in a structured hierarchy, i.e., we can easily access and manipulate tags, IDs, classes, Attributes, or Elements of HTML using commands or methods provided by the Document object, that will guide the programmers and users to understand the document in an easier manner.</p>
+    <p> HTML is used to structure the web pages and Javascript is used to add behavior to our web pages. When an HTML file is loaded into the browser, the javascript can not understand the HTML document directly. So, a corresponding document is created(DOM). DOM is basically the representation of the same HTML document but in a different format with the use of objects. DOM provides several methods to find & manipulate the behavior of the HTML element:</p>
+
+    <ul>
+        <li style="text-align:justify;"><strong>getElementById() Method</strong><strong>: </strong>This method returns
+            the elements that have given an ID which is passed to the function.</li>
+        <li style="text-align:justify;"><strong>getElementsByClassName() Method</strong><strong>:</strong> This method
+            in Javascript returns an object containing all the elements with the specified class names in the document
+            as objects: This</li>
+        <li style="text-align:justify;"><strong>getElementsByName() Method</strong><strong>:</strong> This method
+            returns the collection of all elements of a particular document by name.&nbsp;</li>
+        <li style="text-align:justify;"><strong>getElementsByTagName() Method</strong><strong>:</strong> This method in
+            HTML returns the collection of all the elements in the document with the given tag name.</li>
+        <li style="text-align:justify;"><strong>querySelector() Method</strong><strong>: </strong>This method in HTML is
+            used to return the first element that matches a specified CSS selector(s) in the document.</li>
+        <li style="text-align:justify;"><strong>querySelectorAll() Method</strong><strong>: </strong>This method is used
+            to return a collection of an element’s child elements that match a specified CSS selector(s), as a static
+            NodeList object.</li>
+    </ul>
+    <script>
+        console.log(document);
+        console.log(document.body);
+        console.log(document.body.style);
+        document.body.style.backgroundColor = "grey"
+    </script>
+</body>
+
+</html>
