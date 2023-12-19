@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" name="Marks" id="Marks">
+    <button onclick="getres()">Click</button> <br>
+    <input type="number" name="lang" id="lang">
+    <button onclick="getdays()">Click</button>
+    <script>
+        // let Marks = 250;
+        // if (Marks > 50) {
+        // if (Marks >= 50) {
+        //     console.log("called inside if");
+        // }
+        // if (Marks >= 50) {
+        //     console.log("called inside if");
+        // }else{
+        //     console.log("called inside else");
+        // }
+
+        function getres() {
+            Marks = document.getElementById("Marks").value
+            console.log(Marks);
+            if (Marks >= 0 && Marks <= 100) {
+                if (Marks >= 50 && Marks < 60) {
+                    console.log("called inside pass");
+                } else if (Marks >= 60 && Marks < 70) {
+                    console.log("called inside first");
+                } else {
+                    console.log("called inside else");
+                }
+            } else {
+                console.log("invalid marks");
+            }
+        }
+
+        // if (Marks >= 50 && Marks < 60) {
+        //         console.log("called inside pass");
+        //     }else if (Marks >= 60 && Marks < 70) {
+        //         console.log("called inside first");
+        //     } else{
+        //         console.log("called inside else");
+        //     }
+        function getdays(params) {
+            days = document.getElementById("lang").value
+            switch (days) {
+                case "1":
+                    console.log("Gujarati");
+                    break;
+                case "2":
+                    console.log("Hindi");
+                    break;
+                case "3":
+                    console.log("Eng");
+                    break;
+
+                default:
+                    break;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

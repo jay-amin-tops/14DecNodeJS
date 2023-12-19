@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" name="inp1" placeholder="Enter val 1" class="form-control" id="inp1">
+    <input type="text" name="inp2" placeholder="Enter val 2" class="form-control" id="inp2">
+    <input type="number" name="inp2" placeholder="Enter val 2" class="form-control" id="inp2">
+    <input type="password" name="inp2" placeholder="Enter val 2" class="form-control" id="inp2">
+    <input type="button" name="btn" value="Click" id="btn">
+    <!-- kuchbhi -->
+    <jay style="color: blue;">Test</jay>
+    <jay styleasdfa="color: blue;">Test</jay>
+    <script>
+        document.getElementById("btn").addEventListener("click", function () {
+            // console.log("called");
+            // let inpData =  
+            // inpData = document.getElementById("inp1")   
+            // inpData = document.getElementsByClassName("form-control")    // HTMLCollection
+            // console.log(inpData);
+            // console.log(inpData[0].value);
+            // inpData = document.getElementsByName('inp1')    // NodeList
+            // console.log(inpData);
+            // console.log(inpData[0].value);
+            // inpData = document.getElementsByTagName("input")    // HTMLCollection
+            // console.log(inpData);
+            // console.log(inpData[0].value);
+            // inpData = document.querySelector("input")
+            // console.log(inpData);
+            // console.log(inpData.value);
+            inpData = document.querySelectorAll("input") // NodeList
+            console.log(inpData);
+            console.log(inpData.value);
+        })
+    </script>
+
+</body>
+
+</html>

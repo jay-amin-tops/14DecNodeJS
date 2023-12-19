@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function hitme() {
+            console.log("called handle");
+        }
+
+        // Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')
+        // document.getElementById("btn").addEventListener("click", function () {
+        //     console.log("called addEventListener");
+        // })
+        // Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')
+    </script>
+</head>
+
+<body>
+
+    <button onclick="hitme()">Button click handle</button>
+    <button id="btn">Button event listerner</button>
+
+
+    <script>
+        // function hitme() {
+        //     console.log("called handle");
+        // }
+        document.getElementById("btn").addEventListener("click", function () {
+            console.log("called addEventListener");
+        })
+    </script>
+
+
+</body>
+
+</html>

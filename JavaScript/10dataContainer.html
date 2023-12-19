@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ul>
+        <li>LET (variable)</li>
+        <li>VAR (variable)</li>
+        <li>CONST (container)</li>
+    </ul>
+
+    <p>vari+able</p>
+
+    <script>
+        const constantData = "constantData" // declaration with default value
+        // const constantData = "constantData" //re-declaration with default value  Uncaught SyntaxError: Identifier 'constantData' has already been declared
+        // constantData = "constantData" //re-asignment with new value Uncaught TypeError: Assignment to constant variable.
+        // console.log(constantData);
+        // let varabileLet = "varabileLet"
+        // let varabileLet = "varabileLet" // Uncaught SyntaxError: Identifier 'varabileLet' has already been declared 
+        // varabileLet = "varabileLet Change" // re-assignment possible
+        // console.log(varabileLet);
+        // var varabileVar = "varabileVar " //declaration
+        // console.log(varabileVar);
+        // var varabileVar = "varabileVar update" // re-declaration
+        // console.log(varabileVar);
+        //  varabileVar = "varabileVar checking" // new value assignemnt
+        // console.log(varabileVar);
+
+
+        // var checking = "test var"
+        // let checking_let = "test let"
+        // function testing() {
+        //     // var checking = "test var"
+        //     // let checking_let = "test let"
+        //     console.log(checking);
+        //     console.log(checking_let);
+        // }
+        // testing()
+        // console.log(checking); //Uncaught ReferenceError: checking is not defined
+        // console.log(checking_let); //Uncaught ReferenceError: checking_let is not defined
+       
+        var achecking = 50
+        let achecking_let = 60
+        console.log("Out side function before test var",achecking); //Uncaught ReferenceError: checking is not defined
+        console.log("Out side function before test let",achecking_let); //Uncaught ReferenceError: checking_let is not defined
+        function testing() {
+            var achecking = 80
+            let achecking_let = 90
+            console.log("Inside",achecking," Function");
+            console.log("Inside Function",achecking_let);
+        }
+        testing()
+        console.log("Out side function after test var",achecking); //Uncaught ReferenceError: checking is not defined
+        console.log("Out side function after test let",achecking_let); //Uncaught ReferenceError: checking_let is not defined
+
+        
+
+    </script>
+
+
+</body>
+</html>
