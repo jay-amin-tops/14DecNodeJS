@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script>
+        //handler will work in any placement of JS
+        function handleClick() {
+            console.log("Called Event Handler");
+        }
+        //EventListener will work ony after the DOM elements creation
+        document.getElementById("btn-click").addEventListener("click",function () {
+            console.log("called");
+        })
+    </script> -->
+</head>
+<body>
+    <button onclick="handleClick()">Click me </button>
+    <button id="btn-click">EventListener </button>
+    <script>
+        function handleClick() {
+            console.log("Called Event Handler");
+        }
+        document.getElementById("btn-click").addEventListener("click",function () {
+            console.log("called");
+        })
+    </script>
+</body>
+</html>

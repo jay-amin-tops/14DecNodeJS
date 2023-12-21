@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<style>
+    #container {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        background: yellow;
+    }
+
+    #animate {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background-color: red;
+    }
+</style>
+
+<body>
+
+    <p><button onclick="myMove()" id="btn" data-click="1">Click Me</button></p>
+
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+
+    <script>
+        function myMove(e) {
+            btn = document.getElementById('btn')
+            // btn.setAttribute("data-click", "1") 
+            // console.log(btn.getAttribute("data-click"));
+            let id = null;
+            const elem = document.getElementById("animate");
+            let pos = 0;
+            clearInterval(id);
+            if (btn.getAttribute("data-click") == 1) {
+                id = setInterval(frame, 5);
+                function frame() {
+                    if (pos == 350) {
+                        clearInterval(id);
+                    } else {
+                        pos++;
+                        elem.style.top = pos + "px";
+                        elem.style.left = pos + "px";
+                    }
+                }
+                btn.setAttribute("data-click", "2")
+
+            } else {
+                // console.log("inside else", );
+                let countpx = elem.style.top;
+                countpx =parseInt(countpx.substring(0, countpx.length - 2));
+                // console.log(typeof countpx);
+                id = setInterval(framerev, 500);
+                function framerev() {
+                    if (countpx == 0) {
+                        console.log("inside framerev if");
+                        clearInterval(id);
+                    } else {
+                        countpx--
+                        elem.style.top = countpx+"px";
+                        elem.style.left = countpx+"px";
+                    }
+                }
+                btn.setAttribute("data-click", "1")
+
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

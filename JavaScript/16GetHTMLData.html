@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" autocomplete="off" name="username" class="inp" id="username">
+    <input type="button" value="Addition" name="btn" id="btn">
+
+    <script>
+        // function getData() {
+        //     console.log("Called");
+        // }
+        document.getElementById("btn").addEventListener("click",function () {
+            // console.log("called");
+            // let username = document.getElementById("username")
+            // let username = document.getElementById("username")
+            // console.log(username.value);
+            // let username = document.getElementById("username").value
+            // console.log(username);
+            // let username = document.getElementsByClassName("inp") //HTMLCollection 
+            // console.log(username);
+            // console.log(username[0]);
+            // console.log(username[0].value);
+            // let username = document.getElementsByName("username") //NodeList
+            // console.log(username);
+            // console.log(username[0]);
+            // console.log(username[0].value);
+            // let username = document.getElementsByTagName("input") //HTMLCollection
+            // console.log(username);
+            // console.log(username[0]);
+            // console.log(username[0].value);
+            // let username = document.querySelector(".inp") //like id single data
+            // let username = document.querySelector("#inp") //like id single data
+            // let username = document.querySelector("input") //like id single data
+            // // let username = document.querySelectorAll("input") //HTMLCollection
+            // console.log(username);
+            // console.log(username.value);
+            let username = document.querySelectorAll(".inp") //like id single data
+            // // let username = document.querySelectorAll("#inp") //like id single data
+            // let username = document.querySelectorAll("input") //like id single data
+            // let username = document.querySelectorAll("input") //HTMLCollection
+            console.log(username);
+            console.log(username[0].value);
+        })
+    </script>
+
+</body>
+
+</html>
