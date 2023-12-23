@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let arr = [10,50,"test"]
+        let Marks = [10,50,98,99,90]
+        console.log(Marks[0]);
+        console.log(Marks[1]);
+        console.log(Marks[2]);
+        for (let index = 0; index < Marks.length; index++) {
+            console.log(Marks[index]);
+            const element = Marks[index];
+            console.log(element);
+        }
+        let MarksObject = {"Maths":10,"Eng":50,"Guj":98,"Comp":99,"Sci":90}
+        let UserData = {"UserName":"Test","Password":"checking","Gender":"Male","Racnk":1}
+        console.log(MarksObject);
+        console.log(UserData);
+        console.log(MarksObject.Maths);
+        Object.entries(MarksObject).forEach(element => {
+            console.log(element);
+        });
+    </script>
+
+</body>
+
+</html>

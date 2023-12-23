@@ -1,0 +1,42 @@
+<html>
+
+<body>
+    <p>JavaScript label is a statement used to prefix a label as an identifier. You can specify the label by any name other than the reserved words. It is simply used with a colon (:) in code.</p>
+
+    <p>A label can be used with a break or continue statement to control the flow of the code more precisely. The label is applied to a block of code or a statement.</p>
+
+    <p>Using some examples, we will learn how to define and use the label statement in JavaScript.</p>
+
+    <script>
+        var i, j;
+        //Execution of outerloop and innerloop using label  
+        document.write("Entering the loop!<br /> ");
+
+        outerloop:      // This is the label name for the below loop  
+        for (i = 0; i < 5; i++) {
+            document.write("<b> Outerloop i: </b>" + i + "</br>");
+            innerloop:  //another label  
+            for (j = 0; j <= 4; j++) {
+                //when j is greater than 3, quit the innermost loop  
+                if (j > 3) {
+                    document.write("<b> Break innermost loop when j>3 </b></br>");
+                    break;
+                }
+                // when i = 2, exit from innerloop  
+                if (i == 2) {
+                    document.write("<b> Break innerloop when i=2 </b></br>");
+                    break innerloop;
+                }
+                // when i = 4, exit from outerloop too  
+                if (i == 4) {
+                    document.write("<b> Break outerloop when i=4 </b></br>");
+                    break outerloop;
+                }
+                document.write("Innerloop execution j: " + j + " <br />");
+            }
+        }
+        document.write("Exit from all loops! </br> ");  
+    </script>
+</body>
+
+</html>

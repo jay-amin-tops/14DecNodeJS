@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="advantages-and-disadvantages-of-arrow-functions-in-javascript.png" alt="">
+    <img src="arrowfunction.png" alt="">
+    <p>But arrow functions are not just syntactic sugar for the classic function expressions. There are some big
+        differences of which you should be aware. These differences make arrow functions extra awesome, but they can
+        trip you up if you’re not careful. Sometimes arrow functions won’t cut it and you’ll need to use the good old
+        function expressions.</p>
+    <img src="ArrowWithThis.png" alt="">
+    <script>
+        let foo = function () {
+            console.log('BAZ')
+        }
+        console.log(foo);
+        console.log(foo());
+        function additionfunc(x, y) {
+            return x + y;
+        }
+        console.log(additionfunc);
+        console.log(additionfunc(50, 690));
+        // var addition(x,y) {
+        //  
+        // let addition = (x,y)=> {
+        //         return x+y;
+        // }
+        // let addition = (x, y) => {
+        //     return x + y;
+        // }
+        let addition = (x, y) =>x + y
+        console.log(addition);
+        console.log(addition (50, 690));
+
+
+    </script>
+
+</body>
+
+</html>

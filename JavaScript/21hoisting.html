@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="content">
+        <p id="introduction"><strong>Hoisting</strong> in JavaScript is a behavior in which a function or a variable can
+            be used before declaration. For example,</p>
+
+        <div class="code-editor">
+            <div class="code-editor__area">
+                <div class="pre-code-wrapper">
+                    <div title="Click to copy" class="copy-code-button"></div>
+                    <pre class="js-exec" style="max-height: 600px;"><code class="javascript hljs"><span class="hljs-comment">// using test before declaring</span>
+  <span class="hljs-built_in">console</span>.log(test);   <span class="hljs-comment">// undefined</span>
+  <span class="hljs-keyword">var</span> test;</code></pre>
+                </div>
+            </div>
+            
+        </div>
+
+        <p>The above program works and the output will be <samp>undefined</samp>. The above program behaves as</p>
+
+        <div class="code-editor">
+            <div class="code-editor__area">
+                <div class="pre-code-wrapper">
+                    <div title="Click to copy" class="copy-code-button"></div>
+                    <pre class="js-exec" style="max-height: 600px;"><code class="javascript hljs"><span class="hljs-comment">// using test before declaring</span>
+  <span class="hljs-keyword">var</span> test;
+  <span class="hljs-built_in">console</span>.log(test); <span class="hljs-comment">// undefined</span></code></pre>
+                </div>
+            </div>
+           
+        </div>
+
+        <p>Since&nbsp;the variable <var>test</var> is only declared and has no value, <code>undefined</code> value is
+            assigned to it.</p>
+
+        <p>If you want to learn more about variables, visit <a href="/javascript/variables-constants">JavaScript
+                Variables</a>.</p>
+
+        <p class="note-tip"><strong>Note</strong>: In hoisting, though it seems that the declaration has moved up in the
+            program, the actual thing that happens is that the function and variable declarations are added to memory
+            during the compile phase.</p>
+
+        <hr>
+        <h2 id="variable-hoisting">Variable Hoisting</h2>
+
+        <p>In terms of variables and constants, keyword <code>var</code> is hoisted and <code>let</code> and
+            <code>const</code> does not allow hoisting.</p>
+
+        <p>For example,</p>
+
+        <div class="code-editor">
+            <div class="code-editor__area">
+                <div class="pre-code-wrapper">
+                    <div title="Click to copy" class="copy-code-button"></div>
+                    <pre class="js-exec" style="max-height: 600px;"><code class="javascript hljs"><span class="hljs-comment">// program to display value</span>
+  a = <span class="hljs-number">5</span>;
+  <span class="hljs-built_in">console</span>.log(a);
+  <span class="hljs-keyword">var</span> a; <span class="hljs-comment">// 5</span></code></pre>
+                </div>
+            </div>
+           
+        </div>
+
+        <p>In the above example, variable <var>a</var> is used before declaring it. And the program works and displays
+            the output <samp>5</samp>. The program behaves as:</p>
+
+        <div class="code-editor">
+            <div class="code-editor__area">
+                <div class="pre-code-wrapper">
+                    <div title="Click to copy" class="copy-code-button"></div>
+                    <pre class="js-exec" style="max-height: 600px;"><code class="javascript hljs"><span class="hljs-comment">// program to display value</span>
+  <span class="hljs-keyword">var</span> a;
+  a = <span class="hljs-number">5</span>;
+  <span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">// 5</span></code></pre>
+                </div>
+            </div>
+           
+        </div>
+
+        <hr>
+        <p>However in JavaScript, initializations are not hoisted. For example,</p>
+
+        <div class="code-editor">
+            <div class="code-editor__area">
+                <div class="pre-code-wrapper">
+                    <div title="Click to copy" class="copy-code-button"></div>
+                    <pre class="js-exec" style="max-height: 600px;"><code class="javascript hljs"><span class="hljs-comment">// program to display value</span>
+  <span class="hljs-built_in">console</span>.log(a);
+  <span class="hljs-keyword">var</span> a = <span class="hljs-number">5</span>;</code></pre>
+                </div>
+            </div>
+           
+        </div>
+
+        <p><strong>Output</strong></p>
+
+        <pre><samp>undefined</samp></pre>
+
+        <p>The above program behaves as:</p>
+
+        <div class="code-editor">
+            <div class="code-editor__area">
+                <div class="pre-code-wrapper">
+                    <div title="Click to copy" class="copy-code-button"></div>
+                    <pre class="js-exec" style="max-height: 600px;"><code class="javascript hljs"><span class="hljs-keyword">var</span> a;
+  <span class="hljs-built_in">console</span>.log(a);
+  a = <span class="hljs-number">5</span>;</code></pre>
+                </div>
+            </div>
+            
+        </div>
+
+        <p>Only the declaration is moved to the memory in the compile phase. Hence, the value of variable <var>a</var>
+            is <code>undefined</code> because <var>a</var> is printed without initializing it.</p>
+
+        <hr>
+        <p></p>
+        <div id="block-inject-1" class="block-inject block-inject-1">
+
+
+
+            <style>
+                #div-gpt-ad-Programizcom37046 {
+                    display: none;
+                    width: 728px;
+                    height: 90px;
+                }
+
+                #div-gpt-ad-Programizcom36796 {
+                    display: block;
+                }
+
+                @media(min-width: 992px) {
+                    #div-gpt-ad-Programizcom37046 {
+                        display: block;
+                    }
+
+                    #div-gpt-ad-Programizcom36796 {
+                        display: none;
+                    }
+                }
+            </style>
+
+            <div class="pgAdWrapper"
+                style="min-width: 728px; min-height: 90px; display: flex; justify-content: center; align-items: center;">
+                <div id="div-gpt-ad-Programizcom37046" style="margin: 32px 0;"
+                    data-google-query-id="CJqcsY3kpIMDFf_IcwEdXksBXg">
+                    <div id="google_ads_iframe_/8095840,68410703/.2_A.37046.3_Programiz.com_tier1_0__container__"
+                        style="border: 0pt none;"><iframe
+                            id="google_ads_iframe_/8095840,68410703/.2_A.37046.3_Programiz.com_tier1_0"
+                            name="google_ads_iframe_/8095840,68410703/.2_A.37046.3_Programiz.com_tier1_0"
+                            title="3rd party ad content" width="1" height="1" scrolling="no" marginwidth="0"
+                            marginheight="0" frameborder="0" role="region" aria-label="Advertisement" tabindex="0"
+                            allow="attribution-reporting"
+                            style="border: 0px; vertical-align: bottom; width: 468px; height: 90px;"
+                            data-load-complete="true" data-google-container-id="4"></iframe></div>
+                </div>
+                <div class="adSpinner ad-slot__label"
+                    style="width: 60px; height: 60px; text-align: center; line-height: 60px; margin: 10px auto; font-size: 12px; position: absolute; display: none;">
+                    <span style="color: rgb(243, 243, 243);">Ad</span></div>
+            </div>
+
+            <div id="div-gpt-ad-Programizcom36796" style="margin: 32px 0; min-height: 250px;">
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <p>Also, when the variable is used inside the function, the variable is hoisted only to the top of the function.
+            For example,</p>
+
+        <div class="code-editor">
+            <div class="code-editor__area">
+                <div class="pre-code-wrapper">
+                    <div title="Click to copy" class="copy-code-button"></div>
+                    <pre class="js-exec" style="max-height: 600px;"><code class="javascript hljs"><span class="hljs-comment">// program to display value</span>
+  <span class="hljs-keyword">var</span> a = <span class="hljs-number">4</span>;
+  
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">greet</span>(<span class="hljs-params"></span>) </span>{
+      b = <span class="hljs-string">'hello'</span>;
+      <span class="hljs-built_in">console</span>.log(b); <span class="hljs-comment">// hello</span>
+      <span class="hljs-keyword">var</span> b;
+  }
+  
+  greet(); <span class="hljs-comment">// hello</span>
+  <span class="hljs-built_in">console</span>.log(b);</code></pre>
+                </div>
+            </div>
+           
+        </div>
+
+        <p><strong>Output</strong></p>
+
+        <pre><samp>hello
+  Uncaught ReferenceError: b is not defined</samp></pre>
+
+        <p>In the above example, variable <var>b</var> is hoisted to the top of the function <code>greet</code> and
+            becomes a local variable. Hence <var>b</var> is only accessible inside the function. <var>b</var> does not
+            become a global variable.</p>
+
+        <p>To learn more about local and global variables, visit <a
+                href="https://www.programiz.com/javascript/variable-scope">JavaScript Variable Scope</a>.</p>
+
+        <p class="note-tip"><strong>Note</strong>: In hoisting, the variable declaration is only accessible to the
+            immediate scope.</p>
+
+        <hr>
+        <p>If a variable is used with the <code>let</code> keyword, that variable is not hoisted. For example,</p>
+
+        <div class="code-editor">
+            <div class="code-editor__area">
+                <div class="pre-code-wrapper">
+                    <div title="Click to copy" class="copy-code-button"></div>
+                    <pre class="js-exec" style="max-height: 600px;"><code class="javascript hljs"><span class="hljs-comment">// program to display value</span>
+  a = <span class="hljs-number">5</span>;
+  <span class="hljs-built_in">console</span>.log(a);
+  <span class="hljs-keyword">let</span> a; <span class="hljs-comment">// error</span></code></pre>
+                </div>
+            </div>
+           
+        </div>
+
+        <p><strong>Output</strong></p>
+
+        <pre><samp>Uncaught ReferenceError: Cannot access 'a' before initialization</samp></pre>
+
+        <p>While using <code>let</code>, the variable must be declared first.</p>
+
+        <hr>
+        <h2 id="function-hoisting">Function Hoisting</h2>
+
+        <p>A function can be called before declaring it. For example,</p>
+
+        <div class="code-editor">
+            <div class="code-editor__area">
+                <div class="pre-code-wrapper">
+                    <div title="Click to copy" class="copy-code-button"></div>
+                    <pre class="js-exec" style="max-height: 600px;"><code class="javascript hljs"><span class="hljs-comment">// program to print the text</span>
+  greet();
+  
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">greet</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Hi, there.'</span>);
+  }</code></pre>
+                </div>
+            </div>
+          
+        </div>
+
+        <p><strong>Output</strong></p>
+
+        <pre><samp>Hi, there</samp></pre>
+
+        <p>In the above program, the function <code>greet</code> is called before declaring it and the program shows the
+            output. This is due to hoisting.</p>
+
+        <hr>
+        <p>However, when a function is used as an <strong>expression</strong>, an error occurs because only declarations
+            are hoisted. For example;</p>
+
+        <div class="code-editor">
+            <div class="code-editor__area">
+                <div class="pre-code-wrapper">
+                    <div title="Click to copy" class="copy-code-button"></div>
+                    <pre class="js-exec" style="max-height: 600px;"><code class="javascript hljs"><span class="hljs-comment">// program to print the text</span>
+  greet();
+  
+  <span class="hljs-keyword">let</span> greet = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Hi, there.'</span>);
+  }</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <p><strong>Output</strong></p>
+
+        <pre><samp>Uncaught ReferenceError: greet is not defined</samp></pre>
+
+        <p>If <code>var</code> was used in the above program, the error would be:</p>
+
+        <pre><samp>Uncaught TypeError: greet is not a function</samp></pre>
+
+        <hr>
+        <div class="note-tip">
+            <p><strong>Note</strong>: Generally, hoisting is not performed in other programming languages like Python,
+                C, C++, Java.</p>
+
+            <p>Hoisting can cause undesirable outcomes in your program. And it is best to declare variables and
+                functions first before using them and avoid hoisting.</p>
+
+            <p>In the case of variables, it is better to use <code>let</code> than <code>var</code>.</p>
+        </div>
+    </div>
+    <img src="Hoisting.png" alt="">
+    <script>
+        // console.log(usernamelet); //ReferenceError: Cannot access 'username' before initialization
+        // console.log(usernameconst); // Uncaught ReferenceError: Cannot access 'usernameconst' before initialization
+        console.log(usernamevar); // undefined support hoisting
+        let usernamelet = "test" // declaration
+        var usernamevar = "test" // declaration
+        const usernameconst = "test" // declaration
+        console.log(usernamevar);
+        // let username = "test" // re-declaration
+        // console.log(username);
+        // username = "testing" // re-assingment
+        // console.log(username);
+        // var username = "test" // declaration
+        // console.log(username);
+        // var username = "test new" // re-declaration
+        // console.log(username);
+        // username = "testing" // re-assingment
+        // console.log(username);
+        // const username = "test" // declaration
+        // console.log(username);
+        // const username = "test new" // re-declaration
+        // console.log(username);
+        // username = "testing" // re-assingment
+        // console.log(username);
+    </script>
+</body>
+
+</html>
