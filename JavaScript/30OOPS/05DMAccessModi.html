@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        class MyClass{
+            #PrivateProp = "Data"
+            PropDataMember = "PropDataMember"
+            constructor(){
+                console.log("called inside",this.#PrivateProp);
+            }
+            DispData(){
+                return this.#PrivateProp
+            }
+        }
+
+        ObjectOfMyClass = new MyClass;
+        console.log(ObjectOfMyClass.PropDataMember);
+        console.log("ObjectOfMyClass.PrivateProp",ObjectOfMyClass.PrivateProp);
+        console.log(ObjectOfMyClass.DispData());
+    </script>
+    
+</body>
+</html>

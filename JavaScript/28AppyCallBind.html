@@ -19,22 +19,22 @@
         function) and the code it executes when it is invoked. But that isn’t the entire truth. As a truth loving
         person, I must let you know that a function actually looks closer to the following image:</p>
     <script>
-        // var pokemon = {
-        //     firstname: 'Pika',
-        //     lastname: 'Chu ',
-        //     getPokeName: function () {
-        //         var fullname = this.firstname + ' ' + this.lastname;
-        //         return fullname;
-        //     }
-        // };
-        // // var pokemonName =  ()=> { //Uncaught TypeError: this.getPokeName is not a function
-        // var pokemonName = function () {
-        //     console.log(this.getPokeName() + 'I choose you!');
-        // };
+        var pokemon = {
+            firstname: 'Pika',
+            lastname: 'Chu ',
+            getPokeName: function () {
+                var fullname = this.firstname + ' ' + this.lastname;
+                return fullname;
+            }
+        };
+        // var pokemonName =  ()=> { //Uncaught TypeError: this.getPokeName is not a function
+        var pokemonName = function () {
+            console.log(this.getPokeName() + 'I choose you!');
+        };
 
-        // var logPokemon = pokemonName.bind(pokemon); // creates new object and binds pokemon. 'this' of pokemon === pokemon now
+        var logPokemon = pokemonName.bind(pokemon); // creates new object and binds pokemon. 'this' of pokemon === pokemon now
 
-        // logPokemon(); // 'Pika Chu I choose you!'
+        logPokemon(); // 'Pika Chu I choose you!'
         var pokemon = {
             firstname: 'Pika',
             lastname: 'Chu ',

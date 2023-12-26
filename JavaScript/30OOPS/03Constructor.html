@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Constrcutor is a method which is invoked by default when objects are created</p>
+    <p>used for init value</p>
+    <p>Constrcutor never return</p>
+
+    <script>
+        class Something{
+            connection = "data"
+            constructor(newauth) {
+                this.author = newauth
+            }
+            // databseconnection(){
+            //     console.log("something dipsData");
+            //     return " Data "
+            // }
+            towstate(){
+                console.log("insert for ",this.author);
+            }
+            threeidot(){
+                console.log("update for ",this.author);
+            }
+            somethingsomething(){
+                console.log("delete for ",this.author);
+            }
+        }
+
+        let SomethingObject = new Something("chetan");
+        // console.log(SomethingObject);
+        // console.log(SomethingObject.dipsData());
+        // SomethingObject.databseconnection()
+        SomethingObject.towstate()
+        
+        let SomethingObjectProject2 = new Something("chetanbhai bhagu");
+        let SomethingObjectProject25 = new Something("new auth");
+        // console.log(SomethingObject);
+        // console.log(SomethingObject.dipsData());
+        // SomethingObject.databseconnection()
+        SomethingObjectProject2.towstate()
+        SomethingObjectProject25.towstate()
+    </script>
+
+</body>
+</html>

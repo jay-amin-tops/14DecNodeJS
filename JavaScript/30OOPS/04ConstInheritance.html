@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>Constrcutor is a method which is invoked by default when objects are created</p>
+    <p>used for init value</p>
+
+    <script>
+        class ParentClass {
+            connection = "data"
+            constructor() {
+                // super()
+                console.log("Parent Class");
+            }
+        }
+        class ChildClass extends ParentClass {
+            constructor() {
+                console.log("ChildClass");
+                super() // explicite constructor calling
+            }
+        }
+
+        let SomethingObject = new ChildClass();
+        // console.log(SomethingObject);
+    </script>
+
+</body>
+
+</html>

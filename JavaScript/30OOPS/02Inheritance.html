@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>Inheritance</h2>
+    <p>Accessing parent class properties to child</p>
+    <script>
+        class MathOp {
+            addition(a, b) {
+                return a + b
+            }
+        }
+        class AdvMathOp extends MathOp{
+            averageoftow(r, t) {
+                console.log("called p, q");
+                // console.log(this.addition(p, q));
+                let additionres = this.addition(r, t)
+                return additionres/2
+                // return a + b
+            }
+            averageoftow(p, q,d) {
+                console.log("called p, q,d");
+                // console.log(this.addition(p, q));
+                let additionres = this.addition(p, q)
+                return additionres/2
+                // return a + b
+            }
+        }
+        // class AdvMathOpXy extends AdvMathOp{
+        //     averageoftow(p, q) {
+        //         // console.log(this.addition(p, q));
+        //         let additionres = this.addition(p, q)
+        //         return additionres/2
+        //         // return a + b
+        //     }
+        // }
+
+        let ObjectOfMathOp = new AdvMathOp
+        console.log(ObjectOfMathOp);
+        console.log(ObjectOfMathOp.averageoftow(809,98));
+    </script>
+
+</body>
+
+</html>

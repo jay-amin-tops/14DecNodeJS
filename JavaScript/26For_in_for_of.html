@@ -13,26 +13,27 @@
         const arr = [3, 5, 7];
         // arr.foo = "hello";
         const obj = {"data":"checking","username":"tets"}
-        for (let index = 0; index < arr.length; index++) {
-            console.log("for",arr[index]);
-        }
-
-        for (const i in arr) {
-            // console.log(i);
-            console.log("for in",arr[i]);
-        }
-        for (const oo in obj) {
-            // console.log(i);
-            console.log("for in",oo);
-        }
-        // "0" "1" "2" "foo"
-
-        for (const i of arr) {
-            console.log("for of",i);
-        }
-        // for (const objof of obj) {
+        // for (let index = 0; index < arr.length; index++) {
+        //     console.log("for",arr[index]);
+        // }
+        // for (const i in arr) {
+        //     // console.log(i);
+        //     // console.log("for in",arr[i]);
+        // }
+        // for (const oo in obj) {
+        //     // console.log(i);
+        //     console.log("for in",obj[oo]);
+        // }
+        // // "0" "1" "2" "foo"
+        // for (const i of arr) {
+        //     console.log("for of",i);
+        // }
+        // for (const objof of obj) { //  TypeError: obj is not iterable
         //     console.log("for of",objof);
         // }
+        for (const objof of Object.entries(obj)) { //  TypeError: obj is not iterable
+            console.log("for of",objof);
+        }
         // // Logs: 3 5 7
     </script>
 
