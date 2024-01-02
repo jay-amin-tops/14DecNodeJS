@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <p>JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on
+    JavaScript object syntax. It is commonly used for transmitting data in web applications (e.g., sending some data
+    from the server to the client, so it can be displayed on a web page, or vice versa). You'll come across it quite
+    often, so in this article, we give you all you need to work with JSON using JavaScript, including parsing JSON
+    so you can access data within it, and creating JSON.</p>
+  <table>
+    <tbody>
+      <tr>
+        <th scope="row">Prerequisites:</th>
+        <td>Basic computer literacy, a basic understanding of HTML and CSS, familiarity with JavaScript basics
+          (Building blocks) and OOJS basics (Introduction to objects).</td>
+      </tr>
+      <tr>
+        <th scope="row">Objective:</th>
+        <td>To understand how to work with data stored in JSON, and create your own JSON strings.</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <p> JSON is a text-based data format following JavaScript object syntax, which was popularized by Douglas Crockford.
+    Even though it closely resembles JavaScript object literal syntax, it can be used independently from JavaScript, and
+    many programming environments feature the ability to read (parse) and generate JSON.</p>
+  <p> JSON exists as a string — useful when you want to transmit data across a network. It needs to be converted to a
+    native JavaScript object when you want to access the data. This is not a big issue — JavaScript provides a global
+    JSON object that has methods available for converting between the two.</p>
+  <p>Object { key:"value" }</p>
+  <p>Object { key:function(){} }</p>
+  <p>JSON { "key":"value" }</p>
+  <p>JSON { "key":not able to create a function in JSON }</p>
+
+
+  '[45,45,45,48,748,78,7,89,79,7,99,7]'
+  <pre>
+        {
+            "squadName": "Super hero squad",
+            "homeTown": "Metro City",
+            "formed": 2016,
+            "secretBase": "Super tower",
+            "active": true,
+            "members": [
+              {
+                "name": "Molecule Man",
+                "age": 29,
+                "secretIdentity": "Dan Jukes",
+                "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
+              },
+              {
+                "name": "Madame Uppercut",
+                "age": 39,
+                "secretIdentity": "Jane Wilson",
+                "powers": [
+                  "Million tonne punch",
+                  "Damage resistance",
+                  "Superhuman reflexes"
+                ]
+              },
+              {
+                "name": "Eternal Flame",
+                "age": 1000000,
+                "secretIdentity": "Unknown",
+                "powers": [
+                  "Immortality",
+                  "Heat Immunity",
+                  "Inferno",
+                  "Teleportation",
+                  "Interdimensional travel"
+                ]
+              }
+            ]
+          }
+          superHeroes.homeTown;
+          superHeroes["active"];          
+          superHeroes["members"][1]["powers"][2];
+    </pre>
+
+
+  <a href="https://www.programiz.com/javascript/json">Reference</a>
+  <pre>
+      // JSON syntax
+      {
+          "name": "John",
+          "age": 22,
+          "gender": "male",
+      }
+      // JSON array
+    [ "apple", "mango", "banana"]
+
+    // JSON array containing objects
+    [
+        { "name": "John", "age": 22 },
+        { "name": "Peter", "age": 20 }.
+        { "name": "Mark", "age": 23 }
+    ]
+    </pre>
+  <table border="0">
+    <tbody>
+      <tr>
+        <th>JSON</th>
+        <th>JavaScript Object</th>
+      </tr>
+      <tr>
+        <td>The key in key/value pair should be in double quotes.</td>
+        <td>The key in key/value pair can be without double quotes.</td>
+      </tr>
+      <tr>
+        <td>JSON cannot contain functions.</td>
+        <td>JavaScript objects can contain functions.</td>
+      </tr>
+      <tr>
+        <td>JSON can be created and used by other programming languages.</td>
+        <td>JavaScript objects can only be used in JavaScript.</td>
+      </tr>
+    </tbody>
+  </table>
+  <script>
+
+    let superHeroes = {
+      "squadName": "Super hero squad",
+      "homeTown": "Metro City",
+      "formed": 2016,
+      "secretBase": "Super tower",
+      "active": true,
+      "members": [
+        {
+          "name": "Molecule Man",
+          "age": 29,
+          "secretIdentity": "Dan Jukes",
+          "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
+        },
+        {
+          "name": "Madame Uppercut",
+          "age": 39,
+          "secretIdentity": "Jane Wilson",
+          "powers": [
+            "Million tonne punch",
+            "Damage resistance",
+            "Superhuman reflexes"
+          ]
+        },
+        {
+          "name": "Eternal Flame",
+          "age": 1000000,
+          "secretIdentity": "Unknown",
+          "powers": [
+            "Immortality",
+            "Heat Immunity",
+            "Inferno",
+            "Teleportation",
+            "Interdimensional travel"
+          ]
+        }
+      ]
+    }
+    //   console.log(superHeroes.members);
+    //   console.log(superHeroes);
+    //   console.log(superHeroes.homeTown);
+    //   console.log(superHeroes["active"]);
+    //   console.log(superHeroes["members"][1]["powers"][2]);
+    let jsonObject = '{"username":"test","ranking":"1"}'
+    console.log(jsonObject);
+    console.log(jsonObject.username);
+    const obj = JSON.parse(jsonObject);
+    console.log(obj);
+    console.log(obj.username);
+    let jsonStringi = JSON.stringify(obj)
+    console.log(jsonStringi);
+    console.log(jsonStringi.username);
+
+  </script>
+</body>
+
+</html>
